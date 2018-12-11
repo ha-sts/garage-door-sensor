@@ -27,12 +27,15 @@ MQTT Topic Layout
 
   ```
   ha-sts/garagedoor/{id}/refresh
+  ha-sts/garagedoor/refresh
+  ha-sts/refresh
   ```
 
   Format: Receives a string containing "true".
 
-  This endpoint waits for the word "true" on the topic, then initiates a refresh cycle.
-  The refresh cycle resends the status of the garage door as detected by the sensor.
+  These endpoints wait for the word "true" on the topic, then initiate a refresh cycle.
+  The refresh cycle resends the status of the garage door as detected by the sensor.  The
+  endpoints without the _id_ value are broadcast-like topics.
 
 * Open / Close door
 
