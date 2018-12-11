@@ -14,9 +14,12 @@ MQTT Topic Layout
   ha-sts/garagedoor/{id}/status
   ```
 
-  FIXME: Format here
+  Format: Sends a string containing either the word "open" or "closed".
 
-  FIXME: Description here
+  This endpoint publishes a string containing the word "open" when the sensor detects the
+  garage door open or status is refreshed while the door is already open.  This endpoint
+  publishes the word "closed" when the sensor detects the garage door close or status is
+  refreshed while the door is already closed.
 
 ### Subscribe
 
@@ -26,9 +29,10 @@ MQTT Topic Layout
   ha-sts/garagedoor/{id}/refresh
   ```
 
-  FIXME: Format here
+  Format: Receives a string containing "true".
 
-  FIXME: Description here
+  This endpoint waits for the word "true" on the topic, then initiates a refresh cycle.
+  The refresh cycle resends the status of the garage door as detected by the sensor.
 
 * Open / Close door
 
@@ -36,6 +40,8 @@ MQTT Topic Layout
   ha-sts/garagedoor/{id}/openclose
   ```
 
-  FIXME: Format here
+  Format: Receives a string containing "true".
 
-  FIXME: Description here
+  This endpoint waits for the word "true" on the topic, then triggers the garage door
+  opener.  The trigger will be a dry contact (or similar) output to simulate pressing
+  the open/close button on the garage door opener.
