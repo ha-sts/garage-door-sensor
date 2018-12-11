@@ -11,7 +11,7 @@ MQTT Topic Layout
 * Get door open/closed status
 
   ```
-  ha-sts/garage/{id}/door/{id}/status
+  ha-sts/garagedoor/{id}/status
   ```
 
   FIXME: Format here
@@ -23,7 +23,17 @@ MQTT Topic Layout
 * Refresh / resend status
 
   ```
-  ha-sts/garage/{id}/refresh
+  ha-sts/garagedoor/{id}/refresh
+  ```
+
+  FIXME: Format here
+
+  FIXME: Description here
+
+* Open / Close door
+
+  ```
+  ha-sts/garagedoor/{id}/openclose
   ```
 
   FIXME: Format here
